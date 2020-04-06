@@ -5,15 +5,15 @@ import { Observable } from "rxjs";
 
 const httpOptions = {
   headers: new HttpHeaders({
-    "Content-Type": "application/json"
-  })
+    "Content-Type": "application/json",
+  }),
 };
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class TodoService {
-  todosUrl: string = "https://jsonplaceholder.typicode.com/todos";
+  todosUrl: string = "http://localhost:8080/todos";
   todosLimit = "?_limit=5";
 
   constructor(private http: HttpClient) {}
